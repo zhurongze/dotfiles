@@ -111,6 +111,10 @@ imap <C-W> <C-O><C-W>
 
 " Open NerdTree
 map <leader>n :NERDTreeToggle<CR>
+map <F7> :NERDTreeToggle<CR>
+
+" Tagbar
+nmap <F8> :TagbarToggle<CR> 
 
 map <leader>f :CtrlP<CR>
 map <leader>b :CtrlPBuffer<CR>
@@ -220,8 +224,8 @@ set laststatus=2            " Always show statusline, even if only 1 window.
 set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
 
 " displays tabs with :set list & displays when a line runs off-screen
-set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>
-set list
+" set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>
+" set list
 
 """ Searching and Patterns
 set ignorecase              " Default to using case insensitive searches,
@@ -239,7 +243,7 @@ if has("gui_running")
     set guioptions-=T
 endif
 
-colorscheme molokai
+colorscheme vividchalk
 
 " Paste from clipboard
 map <leader>p "+p
@@ -307,3 +311,9 @@ endif
 if exists("&colorcolumn")
    set colorcolumn=79
 endif
+
+" puppet
+filetype plugin indent on
+
+" easy-motion
+let g:EasyMotion_leader_key = '<Leader><Leader>'
