@@ -1,4 +1,4 @@
-" https://github.com/sontek/dotfiles/
+
 " ==========================================================
 " Dependencies - Libraries/Applications outside of vim
 " ==========================================================
@@ -207,7 +207,9 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 """" Reading/Writing
 set noautowrite             " Never write a file unless I request it.
 set noautowriteall          " NEVER.
-set noautoread              " Don't automatically re-read changed files.
+"set noautoread              " Don't automatically re-read changed files.
+set autoread                " reload files when changed on disk, i.e. via 
+                            " `git checkout`
 set modeline                " Allow vim options to be embedded in files;
 set modelines=5             " they must be within the first or last 5 lines.
 set ffs=unix,dos,mac        " Try recognizing dos, unix, and mac line endings.
@@ -223,9 +225,6 @@ set ruler                   " Show some info, even without statuslines.
 set laststatus=2            " Always show statusline, even if only 1 window.
 set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
 
-" displays tabs with :set list & displays when a line runs off-screen
-" set listchars=tab:>-,eol:$,trail:-,precedes:<,extends:>
-" set list
 
 """ Searching and Patterns
 set ignorecase              " Default to using case insensitive searches,
@@ -243,7 +242,18 @@ if has("gui_running")
     set guioptions-=T
 endif
 
-colorscheme vividchalk
+"colorscheme vividchalk " it is useful for xshell
+"colorscheme molokai
+"colorscheme desert
+
+" solarized options
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+let g:solarized_termtrans = 1
+colorscheme solarized
+
+
+
 
 " Paste from clipboard
 map <leader>p "+p
@@ -317,3 +327,16 @@ filetype plugin indent on
 
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader><Leader>'
+
+" yank and paste with the system clipboard
+set clipboard=unnamed
+
+" Enable basic mouse behavior such as resizing buffers
+set mouse=a
+" Support resizing in tmux
+if exists('$TMUX')
+    set ttymouse=xterm2
+endif
+
+" set PowerLine
+set laststatus=2

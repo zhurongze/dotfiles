@@ -49,3 +49,6 @@
 [submodule "_vim/bundle/vim-easymotion"]
 	path = _vim/bundle/vim-easymotion
 	url = https://github.com/Lokaltog/vim-easymotion.git
+[submodule "_vim/bundle/vim-powerline"]
+	path = _vim/bundle/vim-powerline
+	url = https://github.com/Lokaltog/vim-powerline.git
