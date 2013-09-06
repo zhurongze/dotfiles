@@ -341,3 +341,7 @@ endif
 " set PowerLine
 set laststatus=2
 let g:Powerline_symbols='fancy'
+
+"Golang
+au Filetype go set omnifunc=gocomplete#Complete
+au FileType go au BufWritePre <buffer> Fmt

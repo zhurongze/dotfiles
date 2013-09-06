@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/sontek/code/dotfiles/_mutt/_mutt'
 let g:netrw_dirhist_2='/home/zhu/.vim'
 let g:netrw_dirhist_3='/home/zhu/git/dotfiles/_vim'
+let g:netrw_dirhist_4='/home/zhu/data/glance-2013.2.a1.g77bdfa9/glance.egg-info'
+let g:netrw_dirhist_5='/home/zhu/test/nova-2013.2.a1.g9ad0efe/nova.egg-info'
+let g:netrw_dirhist_6='/home/zhu/golang/go'
