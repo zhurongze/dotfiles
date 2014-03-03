@@ -345,3 +345,8 @@ let g:Powerline_symbols='fancy'
 "Golang
 au Filetype go set omnifunc=gocomplete#Complete
 au FileType go au BufWritePre <buffer> Fmt
+
+" system and vim copy. Only for mac
+"vmap y :w !pbcopy<CR><CR>
+"nmap yy :w !pbcopy<CR><CR>
+"nmap p :r !pbpaste<CR><CR>
