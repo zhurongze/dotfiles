@@ -76,3 +76,6 @@
 [submodule "_vim/bundle/ag-vim"]
 	path = _vim/bundle/ag-vim
 	url = https://github.com/rking/ag.vim.git
+[submodule "_vim/bundle/vim-expand-region"]
+	path = _vim/bundle/vim-expand-region
+	url = https://github.com/terryma/vim-expand-region.git
