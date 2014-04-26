@@ -145,6 +145,13 @@ nmap <Leader>hp <Plug>GitGutterPreviewHunk
 map K <Plug>(expand_region_expand)
 map J <Plug>(expand_region_shrink)
 
+" Multi Cursor
+" Default mapping
+let g:multi_cursor_next_key='<C-n>'
+let g:multi_cursor_prev_key='<C-p>'
+let g:multi_cursor_skip_key='<C-x>'
+let g:multi_cursor_quit_key='<Esc>'
+
 " Load the Gundo window
 map <leader>g :GundoToggle<CR>
 
