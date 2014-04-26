@@ -100,3 +100,6 @@
 [submodule "_vim/bundle/vim-ultisnips"]
 	path = _vim/bundle/vim-ultisnips
 	url = https://github.com/SirVer/ultisnips.git
+[submodule "_vim/bundle/YCM"]
+	path = _vim/bundle/YCM
+	url = https://github.com/Valloric/YouCompleteMe.git
