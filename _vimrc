@@ -117,8 +117,8 @@ map <F7> :NERDTreeToggle<CR>
 nmap <F8> :TagbarToggle<CR> 
 
 " CtrlSF
-nmap <F9> <ESC> :CtrlSF <c-r><c-w><CR>
-nmap <C-F9> <ESC> :CtrlSF <c-r><c-w><CR>
+nmap <F3> <ESC> :CtrlSF <c-r><c-w><CR>
+nmap <C-F3> <ESC> :CtrlSFOpen <CR>
 nnoremap <C-F> :CtrlSF<space>
 
 map <leader>f :CtrlP<CR>
