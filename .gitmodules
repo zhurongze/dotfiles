@@ -85,3 +85,6 @@
 [submodule "_vim/bundle/vim-repeat"]
 	path = _vim/bundle/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
+[submodule "_vim/bundle/vim-commentary"]
+	path = _vim/bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary.git
