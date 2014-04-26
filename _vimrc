@@ -125,7 +125,25 @@ map <leader>f :CtrlP<CR>
 map <leader>b :CtrlPBuffer<CR>
 
 " Ack searching
-nmap <leader>a <Esc>:Ack!
+"nmap <leader>a <Esc>:Ack!
+
+" Ag searching
+nmap <leader>a <Esc>:Ag!
+
+" GitGutter
+let g:gitgutter_enabled = 0
+let g:gitgutter_signs   = 1
+let g:gitgutter_highlight_lines = 1
+nmap <F6> :GitGutterToggle<CR>
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
+nmap <Leader>ha <Plug>GitGutterStageHunk
+nmap <Leader>hu <Plug>GitGutterRevertHunk
+nmap <Leader>hp <Plug>GitGutterPreviewHunk
+
+" Vim Expand Region
+map K <Plug>(expand_region_expand)
+map J <Plug>(expand_region_shrink)
 
 " Load the Gundo window
 map <leader>g :GundoToggle<CR>
