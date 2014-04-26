@@ -91,3 +91,6 @@
 [submodule "_vim/bundle/vim-multiple-cursors"]
 	path = _vim/bundle/vim-multiple-cursors
 	url = https://github.com/terryma/vim-multiple-cursors.git
+[submodule "_vim/bundle/emmet-vim"]
+	path = _vim/bundle/emmet-vim
+	url = https://github.com/mattn/emmet-vim.git
