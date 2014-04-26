@@ -94,3 +94,9 @@
 [submodule "_vim/bundle/emmet-vim"]
 	path = _vim/bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "_vim/bundle/vim-tabular"]
+	path = _vim/bundle/vim-tabular
+	url = https://github.com/godlygeek/tabular.git
+[submodule "_vim/bundle/vim-ultisnips"]
+	path = _vim/bundle/vim-ultisnips
+	url = https://github.com/SirVer/ultisnips.git
