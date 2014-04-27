@@ -87,5 +87,6 @@ export GOOS=darwin
 
 ## more host alias command
 source ~/.hostrc
+source ~/.proxyrc
 source ~/.bash_profile
 
