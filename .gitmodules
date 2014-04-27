@@ -103,3 +103,9 @@
 [submodule "_vim/bundle/YCM"]
 	path = _vim/bundle/YCM
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule "_vim/bundle/browser-connect"]
+	path = _vim/bundle/browser-connect
+	url = https://github.com/Bogdanp/browser-connect.vim.git
+[submodule "_vim/bundle/vimfox"]
+	path = _vim/bundle/vimfox
+	url = https://github.com/dbsr/vimfox.git
