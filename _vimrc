@@ -10,7 +10,7 @@
 " ==========================================================
 " Plugins included
 " ==========================================================
-" Pathogen
+" vundle
 "     Better Management of VIM plugins
 "
 " GunDo
@@ -46,6 +46,76 @@
 " MakeGreen
 "    Generic test runner that works with nose
 "
+
+" ==========================================================
+" vundle - Allows us to organize our vim plugins
+" ==========================================================
+set nocompatible               " be iMproved
+filetype off                   " required!
+
+ set rtp+=~/.vim/bundle/vundle/
+ call vundle#rc()
+
+ " let Vundle manage Vundle
+ " required!
+ Bundle 'gmarik/vundle'
+
+ " My Bundles here:
+ "
+ " original repos on github
+Bundle  'tpope/vim-git'
+Bundle  'mitechie/pyflakes-pathogen'
+Bundle  'sjl/gundo.vim.git'
+Bundle  'fs111/pydoc.vim.git'
+Bundle  'vim-scripts/pep8'
+Bundle  'vim-scripts/The-NERD-tree'
+Bundle  'vim-scripts/AutoComplPop'
+Bundle  'altercation/vim-colors-solarized'
+Bundle  'plasticboy/vim-markdown'
+Bundle  'garbas/vim-snipmate'
+Bundle  'MarcWeber/vim-addon-mw-utils'
+Bundle  'tomtom/tlib_vim'
+Bundle  'honza/vim-snippets'
+Bundle  'kien/ctrlp.vim.git'
+Bundle  'ajf/puppet-vim'
+Bundle  'Lokaltog/vim-easymotion'
+Bundle  'Lokaltog/vim-powerline'
+Bundle  'jnwhiteh/vim-golang'
+Bundle  'scrooloose/syntastic'
+Bundle  'majutsushi/tagbar'
+Bundle  'saltstack/salt-vim'
+Bundle  'tpope/vim-fugitive'
+Bundle  'mileszs/ack.vim.git'
+Bundle  'dyng/ctrlsf.vim.git'
+Bundle  'airblade/vim-gitgutter'
+Bundle  'rking/ag.vim'
+Bundle  'terryma/vim-expand-region'
+Bundle  'tpope/vim-surround'
+Bundle  'tpope/vim-repeat'
+Bundle  'tpope/vim-commentary'
+Bundle  'terryma/vim-multiple-cursors'
+Bundle  'mattn/emmet-vim'
+Bundle  'godlygeek/tabular'
+Bundle  'SirVer/ultisnips'
+Bundle  'Valloric/YouCompleteMe'
+Bundle  'dbsr/vimfox'
+ " vim-scripts repos
+ " non github repos
+ " git repos on your local machine (ie. when working on your own plugin)
+ " ...
+
+ filetype plugin indent on     " required!
+ "
+ " Brief help
+ " :BundleList          - list configured bundles
+ " :BundleInstall(!)    - install(update) bundles
+ " :BundleSearch(!) foo - search(or refresh cache first) for foo
+ " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
+ "
+ " see :h vundle for more details or wiki for FAQ
+ " NOTE: comments after Bundle command are not allowed..
+
+
 " ==========================================================
 " Shortcuts
 " ==========================================================
@@ -114,7 +184,7 @@ map <leader>n :NERDTreeToggle<CR>
 map <F7> :NERDTreeToggle<CR>
 
 " Tagbar
-nmap <F8> :TagbarToggle<CR> 
+nmap <F8> :TagbarToggle<CR>
 
 " CtrlSF
 nmap <F3> <ESC> :CtrlSF <c-r><c-w><CR>
@@ -160,13 +230,7 @@ map <leader>j :RopeGotoDefinition<CR>
 
 " Rename whatever the cursor is on (including references to it)
 map <leader>r :RopeRename<CR>
-" ==========================================================
-" Pathogen - Allows us to organize our vim plugins
-" ==========================================================
-" Load pathogen with docs for all plugins
-filetype off
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+
 
 " ==========================================================
 " Basic Settings
@@ -218,7 +282,7 @@ set nowrap                  " don't wrap text
 set linebreak               " don't wrap textin the middle of a word
 set autoindent              " always set autoindenting on
 set smartindent             " use smart indent if there is no indent file
-set tabstop=4               " <tab> inserts 4 spaces 
+set tabstop=4               " <tab> inserts 4 spaces
 set shiftwidth=4            " but an indent level is 2 spaces wide.
 set softtabstop=4           " <BS> over an autoindent deletes both spaces.
 set expandtab               " Use spaces, not tabs, for autoindent/tab key.
@@ -238,7 +302,7 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 set noautowrite             " Never write a file unless I request it.
 set noautowriteall          " NEVER.
 "set noautoread              " Don't automatically re-read changed files.
-set autoread                " reload files when changed on disk, i.e. via 
+set autoread                " reload files when changed on disk, i.e. via
                             " `git checkout`
 set modeline                " Allow vim options to be embedded in files;
 set modelines=5             " they must be within the first or last 5 lines.
@@ -259,7 +323,7 @@ set statusline=[%l,%v\ %P%M]\ %f\ %r%h%w\ (%{&ff})\ %{fugitive#statusline()}
 """ Searching and Patterns
 set ignorecase              " Default to using case insensitive searches,
 set smartcase               " unless uppercase letters are used in the regex.
-set smarttab                " Handle tabs more intelligently 
+set smarttab                " Handle tabs more intelligently
 set hlsearch                " Highlight searches by default.
 set incsearch               " Incrementally search while typing a /regex
 
