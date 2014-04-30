@@ -3,8 +3,8 @@
     directory of file type configurations and plugins
 .vimrc
     my vim configuration
-.screenrc
-    my screen configuration
+.tmux.conf
+    my tmux configuration
 .weechat
     my configuration for weechat, a great irc client
 .gimp
@@ -33,6 +33,17 @@ From this top-level directory.
 Because this bit is pretty portable
 
     ./install.sh vim
+
+#### more installation for vim
+
+    mkdir _vim/bundle/
+    cd _vim/bundle/
+    git clone https://github.com/gmarik/vundle.git
+    vim
+    :BundleInstall
+
+    cd _vim/bundle/YouCompleteMe/
+    ./install.sh --clang-completer   # requirements in https://github.com/Valloric/YouCompleteMe
 
 ### Restore old source Files
 To replace installed files with the originals:
