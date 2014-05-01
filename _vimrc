@@ -98,6 +98,7 @@ Bundle  'godlygeek/tabular'
 Bundle  'SirVer/ultisnips'
 Bundle  'Valloric/YouCompleteMe'
 Bundle  'dbsr/vimfox'
+Bundle  'yonchu/accelerated-smooth-scroll'
  " vim-scripts repos
  " non github repos
  " git repos on your local machine (ie. when working on your own plugin)
