@@ -99,6 +99,9 @@ Bundle  'SirVer/ultisnips'
 Bundle  'Valloric/YouCompleteMe'
 Bundle  'dbsr/vimfox'
 Bundle  'yonchu/accelerated-smooth-scroll'
+Bundle  'rizzatti/funcoo.vim'
+Bundle  'rizzatti/dash.vim'
+
  " vim-scripts repos
  " non github repos
  " git repos on your local machine (ie. when working on your own plugin)
@@ -230,6 +233,9 @@ map <leader>j :RopeGotoDefinition<CR>
 
 " Rename whatever the cursor is on (including references to it)
 map <leader>r :RopeRename<CR>
+
+" Dash
+nmap <silent> <leader>d <Plug>DashSearch
 
 
 " ==========================================================
