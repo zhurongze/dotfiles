@@ -108,7 +108,7 @@ unbind-key M-8      ; bind-key -n M-8   select-window -t 8
 unbind-key M-9      ; bind-key -n M-9   select-window -t 9
 
 # Pane selection and resizing
-unbind-key M-h      ; bind-key M-h      select-pane -L
-unbind-key M-k      ; bind-key M-k      select-pane -U
-unbind-key M-j      ; bind-key M-j      select-pane -D
-unbind-key M-l      ; bind-key M-l      select-pane -R
+unbind-key M-h      ; bind-key -n M-h      select-pane -L
+unbind-key M-k      ; bind-key -n M-k      select-pane -U
+unbind-key M-j      ; bind-key -n M-j      select-pane -D
+unbind-key M-l      ; bind-key -n M-l      select-pane -R
