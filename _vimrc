@@ -101,6 +101,7 @@ Bundle  'dbsr/vimfox'
 Bundle  'yonchu/accelerated-smooth-scroll'
 Bundle  'rizzatti/funcoo.vim'
 Bundle  'rizzatti/dash.vim'
+Bundle  'jimenezrick/vimerl'
 
  " vim-scripts repos
  " non github repos
@@ -424,6 +425,7 @@ endif
 
 " puppet
 filetype plugin indent on
+au FileType puppet setlocal sw=2 sts=2 tabstop=4 et
 
 " easy-motion
 let g:EasyMotion_leader_key = '<Leader><Leader>'
