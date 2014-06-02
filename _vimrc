@@ -192,7 +192,7 @@ nmap <F8> :TagbarToggle<CR>
 
 " CtrlSF
 nmap <F3> <ESC> :CtrlSF <c-r><c-w><CR>
-nmap <C-F3> <ESC> :CtrlSFOpen <CR>
+nmap <F4> <ESC> :CtrlSFOpen <CR>
 nnoremap <C-F> :CtrlSF<space>
 
 map <leader>f :CtrlP<CR>
