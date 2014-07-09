@@ -10,10 +10,10 @@ unbind %
 bind | split-window -h
 bind - split-window -v
 
-bind h select-pane -L
-bind j select-pane -D
-bind k select-pane -U
-bind l select-pane -R
+unbind-key h
+unbind-key j
+unbind-key k
+unbind-key l
 
 # set vim motion keys while in copy mode
 setw -g mode-keys vi
