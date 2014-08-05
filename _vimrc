@@ -21,9 +21,6 @@
 " Commant-T
 "     Allows easy search and opening of files within a given path
 "
-" Snipmate
-"     Configurable snippets to avoid re-typing common comands
-"
 " PyFlakes
 "     Underlines and displays errors with Python on-the-fly
 "
@@ -71,7 +68,6 @@ Bundle  'vim-scripts/The-NERD-tree'
 Bundle  'vim-scripts/AutoComplPop'
 Bundle  'altercation/vim-colors-solarized'
 Bundle  'plasticboy/vim-markdown'
-Bundle  'garbas/vim-snipmate'
 Bundle  'MarcWeber/vim-addon-mw-utils'
 Bundle  'tomtom/tlib_vim'
 Bundle  'honza/vim-snippets'
@@ -95,8 +91,9 @@ Bundle  'tpope/vim-commentary'
 Bundle  'terryma/vim-multiple-cursors'
 Bundle  'mattn/emmet-vim'
 Bundle  'godlygeek/tabular'
-Bundle  'SirVer/ultisnips'
+Bundle  'ervandew/supertab'
 Bundle  'Valloric/YouCompleteMe'
+Bundle  'SirVer/ultisnips'
 Bundle  'dbsr/vimfox'
 Bundle  'yonchu/accelerated-smooth-scroll'
 Bundle  'rizzatti/funcoo.vim'
@@ -447,6 +444,16 @@ let g:Powerline_symbols='fancy'
 "Golang
 au Filetype go set omnifunc=gocomplete#Complete
 au FileType go au BufWritePre <buffer> Fmt
+
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " system and vim copy. Only for mac
 "vmap y :w !pbcopy<CR><CR>
