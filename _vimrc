@@ -1,4 +1,4 @@
-" ==========================================================
+
 " Dependencies - Libraries/Applications outside of vim
 " ==========================================================
 " Pep8 - http://pypi.python.org/pypi/pep8
@@ -42,6 +42,7 @@
 " MakeGreen
 "    Generic test runner that works with nose
 "
+"
 
 " ==========================================================
 " vundle - Allows us to organize our vim plugins
@@ -59,46 +60,60 @@ filetype off                   " required!
  " My Bundles here:
  "
  " original repos on github
-Bundle  'tpope/vim-git'
+
+" vim plugin
 Bundle  'mitechie/pyflakes-pathogen'
-Bundle  'sjl/gundo.vim.git'
-Bundle  'fs111/pydoc.vim.git'
-Bundle  'vim-scripts/pep8'
-Bundle  'vim-scripts/The-NERD-tree'
-Bundle  'vim-scripts/AutoComplPop'
-Bundle  'altercation/vim-colors-solarized'
-Bundle  'plasticboy/vim-markdown'
-Bundle  'MarcWeber/vim-addon-mw-utils'
-Bundle  'tomtom/tlib_vim'
-Bundle  'honza/vim-snippets'
-Bundle  'kien/ctrlp.vim.git'
+Bundle  'rizzatti/funcoo.vim'
+
+" language support
 Bundle  'ajf/puppet-vim'
-Bundle  'Lokaltog/vim-easymotion'
-Bundle  'Lokaltog/vim-powerline'
 Bundle  'jnwhiteh/vim-golang'
-Bundle  'scrooloose/syntastic'
-Bundle  'majutsushi/tagbar'
+Bundle  'plasticboy/vim-markdown'
+Bundle  'vim-scripts/pep8'
+Bundle  'fs111/pydoc.vim.git'
 Bundle  'saltstack/salt-vim'
+Bundle  'jimenezrick/vimerl'
+
+" decorate
+Bundle  'Lokaltog/vim-powerline'
+Bundle  'tpope/vim-git'
+Bundle  'altercation/vim-colors-solarized'
 Bundle  'tpope/vim-fugitive'
-Bundle  'mileszs/ack.vim.git'
-Bundle  'dyng/ctrlsf.vim.git'
 Bundle  'airblade/vim-gitgutter'
-Bundle  'rking/ag.vim'
-Bundle  'terryma/vim-expand-region'
-Bundle  'tpope/vim-surround'
-Bundle  'tpope/vim-repeat'
-Bundle  'tpope/vim-commentary'
-Bundle  'terryma/vim-multiple-cursors'
-Bundle  'mattn/emmet-vim'
+
+" edit
+Bundle  'vim-scripts/The-NERD-tree'
+Bundle  'sjl/gundo.vim.git'
+Bundle  'MarcWeber/vim-addon-mw-utils'
+Bundle  'vim-scripts/AutoComplPop'
+Bundle  'tomtom/tlib_vim'
+Bundle  'kien/ctrlp.vim.git'
+Bundle  'Lokaltog/vim-easymotion'
+Bundle  'majutsushi/tagbar'
+Bundle  'mileszs/ack.vim.git'
 Bundle  'godlygeek/tabular'
+Bundle  'yonchu/accelerated-smooth-scroll'
+Bundle  'vim-scripts/VisIncr'
+Bundle  'vim-scripts/matchit.zip'
+Bundle  'Townk/vim-autoclose'
+Bundle  'rking/ag.vim'
+Bundle  'terryma/vim-multiple-cursors'
+Bundle  'tpope/vim-repeat'
+Bundle  'terryma/vim-expand-region'
+
+
+" coding
+Bundle  'honza/vim-snippets'
+Bundle  'scrooloose/syntastic'
+Bundle  'dyng/ctrlsf.vim.git'
+Bundle  'tpope/vim-surround'
+Bundle  'mattn/emmet-vim'
 Bundle  'ervandew/supertab'
 Bundle  'Valloric/YouCompleteMe'
 Bundle  'SirVer/ultisnips'
-Bundle  'dbsr/vimfox'
-Bundle  'yonchu/accelerated-smooth-scroll'
-Bundle  'rizzatti/funcoo.vim'
+Bundle  'tpope/vim-commentary'
 Bundle  'rizzatti/dash.vim'
-Bundle  'jimenezrick/vimerl'
+
 
  " vim-scripts repos
  " non github repos
@@ -199,7 +214,11 @@ map <leader>b :CtrlPBuffer<CR>
 "nmap <leader>a <Esc>:Ack!
 
 " Ag searching
-nmap <leader>a <Esc>:Ag!
+nmap <leader>g <Esc>:Ag!
+
+" AutoClose
+" autoclose use <leader>a to toggle on/off
+nmap <F9> :AutoCloseToggle<CR>
 
 " GitGutter
 let g:gitgutter_enabled = 0
@@ -224,7 +243,7 @@ let g:multi_cursor_skip_key='<C-x>'
 let g:multi_cursor_quit_key='<Esc>'
 
 " Load the Gundo window
-map <leader>g :GundoToggle<CR>
+map <leader>u :GundoToggle<CR>
 
 " Jump to the definition of whatever the cursor is on
 map <leader>j :RopeGotoDefinition<CR>
