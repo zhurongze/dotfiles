@@ -105,3 +105,5 @@ source ~/.hostrc
 source ~/.proxyrc
 source ~/.bash_profile
 
+## set prompt
+export PROMPT='${ret_status}%{$fg_bold[green]%}%p %n@%m %{$fg[cyan]%}%~ %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
