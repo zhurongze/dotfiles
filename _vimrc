@@ -464,6 +464,10 @@ let g:Powerline_symbols='fancy'
 au Filetype go set omnifunc=gocomplete#Complete
 au FileType go au BufWritePre <buffer> Fmt
 
+" YCM
+" https://github.com/Valloric/YouCompleteMe/blob/master/doc/youcompleteme.txt
+let g:ycm_confirm_extra_conf = 0
+
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
