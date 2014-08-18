@@ -66,6 +66,8 @@ alias gca="git commit -a "
 alias gp="git push "
 alias gpm="git push origin master "
 alias gpl="git pull origin master "
+alias gck="git checkout "
+alias gckm="git checkout master "
 
 
 # open files
