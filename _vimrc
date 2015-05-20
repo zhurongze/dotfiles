@@ -464,6 +464,9 @@ let g:Powerline_symbols='fancy'
 au Filetype go set omnifunc=gocomplete#Complete
 au FileType go au BufWritePre <buffer> Fmt
 
+"Turn On Relative Line Numbers
+set relativenumber
+
 " YCM
 " https://github.com/Valloric/YouCompleteMe/blob/master/doc/youcompleteme.txt
 let g:ycm_confirm_extra_conf = 0
