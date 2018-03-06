@@ -486,3 +486,6 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 "vmap y :w !pbcopy<CR><CR>
 "nmap yy :w !pbcopy<CR><CR>
 "nmap p :r !pbpaste<CR><CR>
+
+" Get the 2-space YAML as the default when hit carriage return after the colon
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
