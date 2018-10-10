@@ -9,7 +9,7 @@
 " ==========================================================
 " Plugins included
 " ==========================================================
-" vundle
+
 "     Better Management of VIM plugins
 "
 " GunDo
@@ -60,12 +60,15 @@ filetype off                   " required!
  " My Bundles here:
  "
  " original repos on github
+Bundle 'vim-scripts/vimprj'
+Bundle 'vim-scripts/DfrankUtil'
+Bundle 'vim-scripts/indexer.tar.gz'
 
 " vim plugin
 Bundle  'mitechie/pyflakes-pathogen'
 Bundle  'rizzatti/funcoo.vim'
-
-" language support
+"
+"" language support
 Bundle  'ajf/puppet-vim'
 Bundle  'jnwhiteh/vim-golang'
 Bundle  'plasticboy/vim-markdown'
@@ -73,15 +76,21 @@ Bundle  'vim-scripts/pep8'
 Bundle  'fs111/pydoc.vim.git'
 Bundle  'saltstack/salt-vim'
 Bundle  'jimenezrick/vimerl'
+"
 
-" decorate
+" above fast
+
+"" decorate
 Bundle  'Lokaltog/vim-powerline'
 Bundle  'tpope/vim-git'
 Bundle  'altercation/vim-colors-solarized'
 Bundle  'tpope/vim-fugitive'
 Bundle  'airblade/vim-gitgutter'
+"
 
-" edit
+" above fast
+
+"" edit
 Bundle  'vim-scripts/The-NERD-tree'
 Bundle  'sjl/gundo.vim.git'
 Bundle  'MarcWeber/vim-addon-mw-utils'
@@ -92,14 +101,16 @@ Bundle  'Lokaltog/vim-easymotion'
 Bundle  'majutsushi/tagbar'
 Bundle  'mileszs/ack.vim.git'
 Bundle  'godlygeek/tabular'
-Bundle  'yonchu/accelerated-smooth-scroll'
+"Bundle  'yonchu/accelerated-smooth-scroll'
 Bundle  'vim-scripts/VisIncr'
 Bundle  'vim-scripts/matchit.zip'
-"Bundle  'Townk/vim-autoclose'
+Bundle  'Townk/vim-autoclose'
 Bundle  'rking/ag.vim'
 Bundle  'terryma/vim-multiple-cursors'
 Bundle  'tpope/vim-repeat'
 Bundle  'terryma/vim-expand-region'
+Bundle  'mfukar/robotframework-vim'
+Bundle  'gu-fan/riv.vim'
 
 
 " coding
@@ -113,6 +124,11 @@ Bundle  'Valloric/YouCompleteMe'
 Bundle  'SirVer/ultisnips'
 Bundle  'tpope/vim-commentary'
 Bundle  'rizzatti/dash.vim'
+
+
+" Theme
+Bundle 'nikitavoloboev/vim-night-blue'
+Bundle 'connorholyday/vim-snazzy'
 
 
  " vim-scripts repos
@@ -367,7 +383,9 @@ endif
 let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 let g:solarized_termtrans = 1
-colorscheme solarized
+" colorscheme solarized
+" colorscheme night-blue
+" colorscheme snazzy
 
 
 
@@ -489,3 +507,10 @@ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " Get the 2-space YAML as the default when hit carriage return after the colon
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" modify updatetime from default 5000 to 500, so tagbar will be faster
+set updatetime=500
+autocmd FileType tagbar setlocal nocursorline nocursorcolumn
+let g:tagbar_compact=1
+
+"" rst

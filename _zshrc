@@ -83,29 +83,39 @@ alias -s tgz='tar -xzvf'
 alias -s zip='unzip'
 alias -s bz2='tar -xjvf'
 
+# command
+alias ls='exa '
+alias cat='ccat '
+
 ## work
 alias wk='tmux a -t work '
 alias nwk='tmux -2 new -s work -d'
 
 [[ -s /usr/local/etc/autojump.sh ]] && . /usr/local/etc/autojump.sh
 
-## for golang
-#go安装的位置
-export GOROOT=$HOME/go
-#类似工作空间
-export GOPATH=$HOME/mygo
-#将bin目录加入环境变量
-export PATH=${PATH}:${GOPATH}/bin:$GOROOT/bin
-#声明32位还是64位
-export GOARCH=amd64
-#声明操作系统类型
-export GOOS=darwin
-
-
-## more host alias command
 source ~/.hostrc
 source ~/.proxyrc
 source ~/.bash_profile
 
 ## set prompt
 export PROMPT='${ret_status}%{$fg_bold[green]%}%p %n@%m %{$fg[cyan]%}%~ %{$fg_bold[blue]%}$(git_prompt_info)%{$fg_bold[blue]%} % %{$reset_color%}'
+
+##
+## for golang
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME/.go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+#声明32位还是64位
+export GOARCH=amd64
+#声明操作系统类型
+export GOOS=darwin
+
+## java
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home'
+
+## more host alias command
+#
+#
+# anttibody
+source <(antibody init)
+antibody bundle < ~/.zsh_plugins.txt
